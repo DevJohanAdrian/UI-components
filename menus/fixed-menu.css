@@ -8,7 +8,11 @@
     position: fixed;
     background-color: rgb(34, 131, 211);
     width: 100%;
-    text-align:end
+    text-align: end;
+    top: 0;
+    right: 0;
+
+  
 }
 
 ul.list {
@@ -34,4 +38,5 @@ ul li a:hover{
 
 .scroll{
     height: 1200px;
+    background-color: tomato;
 }
