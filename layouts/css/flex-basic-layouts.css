@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 80vw;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.container>* {
+    background-color: #f2ff371c;
+}
+
+.title {
+    text-align: center;
+    margin: 1em auto 1em auto;
+}
+
+/* even columns */
+
+/* .even-columns > *{
+    text-align: center;
+    border: 1px solid #f2ff37;
+    flex: 1 1 10em;
+} */
+
+.even-columns {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.item-even-column {
+    text-align: center;
+    border: 1px solid #f2ff37;
+    flex: 1 1 10em;
+    /* If you set height then flex wrap is not workig */
+    /* height: 10em;*/
+    padding: 3rem;
+}
+
+/* grid-ish */
+.grid-ish {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item-grid {
+    border: 1px solid #f2ff37;
+    padding: 3rem;
+    flex: 1 1 10rem;
+}
+
+/* content-side */
+
+.content-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.content-side>* {
+    border: 1px solid #f2ff37;
+    padding: 3rem;
+}
+
+
+.item-content-main {
+    flex: 1 1 70%;
+    min-width: 30ch;
+}
+
+.item-content-side {
+    flex: 1 1 25%;
+    /* because of gap property */
+    min-width: 15ch;
+}
+
+
+/* variation 1 */
+.variation-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+
+.item-variation {
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+    text-align: center;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-5,
+.item-6,
+.item-7 {
+    flex: 1 1 30%;
+}
+
+.item-4,
+.item-8 {
+    flex: 1 1 100%;
+}
+
+/* variation 2 */
+.variation-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item-variation-2 {
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 45%;
+    flex-shrink: 1;
+    border: 1px solid #f2ff37;
+    padding: 3rem;
+}
+
+/* variation 3 */
+
+.variation-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.item-row {
+    text-align: center;
+    flex: 1 1 auto;
+
+}
+
+.item-mid {
+    flex: 2 1 auto;
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item-column {
+    text-align: center;
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+    flex: 1 1 auto;
+
+}
+
+
+/* streach all */
+
+.strech-all {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.item-strech {
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+    flex-grow: 1;
+    height: 30em;
+}
+
+
+/* strech mid */
+
+.strech-mid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item-strech-mid {
+    text-align: center;
+    flex: 1 1 10%;
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+
+}
+
+.item-center {
+    text-align: center;
+    flex: 2 1 60%;
+    /* Set the middle element to grow and stretch */
+    padding: 3rem;
+    border: 1px solid #f2ff37;
+
+}
+
+/* grid row */
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item-grid-row {
+    padding: 3rem;
+    flex: 1 1 30%;
+    border: 1px solid #f2ff37;
+}
+
+/* vertical stack */
+
+.grid-column {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+}
+
+.item-grid-column {
+    text-align: center;
+    padding: 3rem;
+    flex: 1 1 auto;
+    border: 1px solid #f2ff37;
+}
+
+/* vertical bars */
+.vertical-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    height: 300px;
+}
+
+.vertical-bars>* {
+    text-align: center;
+    border: 1px solid #f2ff37;
+}
+
+.item-vertical-1 {
+    height: 70px;
+}
+
+.item-vertical-2 {
+    height: 100px;
+}
+
+.item-vertical-3 {
+    height: 250px;
+}
+
+.item-vertical-4 {
+    height: 300px;
+}
+
+.item-vertical-5 {
+    height: 80px;
+}
+
+/* horizontal bars */
+.horizontal.bars {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: em;
+    height: 300px;
+
+}
+
+.horizontal-bars > * {
+    text-align: center;
+    border: 1px solid #f2ff37;
+}
+
+
+.item-horizontal-1 {
+    flex: 1 2 30%;
+}
+
+.item-horizontal-2 {
+    width: 100px;
+}
+
+.item-horizontal-3 {
+    height: 250px;
+}
+
+.item-horizontal-4 {
+    height: 300px;
+}
+
+.item-horizontal-5 {
+    height: 80px;
+}

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    min-height: 100vh;
+}
+
+body, .holy-grail-body{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    flex: 1 1 auto ;
+}
+
+.holy-grail-content{
+    flex: 1 3 auto;
+}
+
+
+
+div, main, aside, header{
+    border: 1px solid black;
+}
+
+@media (min-width: 768px) {
+	/**
+	 * Body items are now side by side
+	 */
+	.holy-grail-body {
+		flex-direction: row;
+	}
+
+	/**
+	 * Sidebars have a basic 260 width
+	 * and are not really flexible anymore
+	 */
+	.hg-sidebar {
+		flex: 0 0 260px;
+	}
+}

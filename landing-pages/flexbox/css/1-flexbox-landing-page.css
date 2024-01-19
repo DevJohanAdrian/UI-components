@@ -198,6 +198,10 @@ footer .section-title, footer .copy{
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content: center;
-    background-color: #f2f2f2;
+    justify-content: space-evenly;
+    
+}
+
+.social-network i{
+    font-size: 2em;
 }
