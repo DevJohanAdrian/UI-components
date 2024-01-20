@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 90vw;
+    padding: 1em;
+    border: 1px solid #f2ff37;
+    margin: 1em auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.container>* {
+    background-color: #f2ff371c;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 4fr 8fr 4fr;
+    gap: 0.5em;
+}
+
+
+.item-grid-1 {
+    border: 1px solid #f2ff37;
+    text-align: center;
+}
