@@ -29,7 +29,7 @@ body {
 .grid-1 {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: 4fr 8fr 4fr;
+    grid-template-rows: 8fr 3fr 8fr;
     gap: 0.5em;
 }
 
@@ -37,4 +37,61 @@ body {
 .item-grid-1 {
     border: 1px solid #f2ff37;
     text-align: center;
+}
+
+/* holygrail */
+
+.holy-grail-grid {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "left-side main right-side"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5em;
+    text-align: center;
+
+}
+
+.holy-grail-grid > *{
+    border: 1px solid #f2ff37;
+    padding: 1em;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: #f2ff371c;
+}
+
+.left {
+    grid-area: left-side;
+    background-color: #f2ff371c;
+}
+
+.main {
+    grid-area: main;
+    background-color: #f2ff371c;
+}
+
+.right {
+    grid-area: right-side;
+    background-color: #f2ff371c;
+}
+
+.foot {
+    grid-area: footer;
+    background-color: #f2ff371c;
+}
+
+@media (max-width:768px) {
+    .holy-grail-grid {
+        grid-template-areas:
+        "header" 
+        "left-side" 
+        "main" 
+        "right-side" 
+        "footer";
+    }
 }
