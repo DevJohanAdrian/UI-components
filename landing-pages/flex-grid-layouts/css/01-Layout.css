@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorOne: #DFE0E2;
+    --colorTwo: #435058;
+    --colorThree: #848C8E;
+    --colorFour: #ECEBF3;
+    --colorTextos: #3a3434;
+    --heroColor: #735F3D;
+    --raising-black: #1E212B;
+    --links-underline-color: #9b51e0;
+    --paddingSection: 60px 0px;
+    --marginElementos: 40px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: var(--colorFour);
+    border: 1px solid green;
+
+}
+
+/* navigation */
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 70px;
+    background-color: black;
+}
+
+.logo {
+    height: inherit;
+}
+
+.logo img {
+    display: block;
+    height: 100%;
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 1em;
+    color: var(--colorFour)
+}
+
+.links li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: var(--links-underline-color);
+}
+
+/* banner */
+.hero {
+    height: 500px;
+    background-image: url("../assets/sung-jin-cho-Z7q92s_KcpU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* tamaño
+grosor de la letra */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 9rem;
+    background-color: black;
+    color: white;
+
+}
+
+/* offers */
+.offers-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.offers-menu>* {
+    border: 1px solid black;
+
+}
+
+.list-offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+
+
+.travel-offers {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.list-offer-container li a {
+    text-decoration: none;
+    color: var(--raising-black);
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+.list-offer-container li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: var(--links-underline-color);
+}
+
+.night-sale-cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.night-sale-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: [col-start] 1fr [mid-start] 1fr [mid-end] 1fr [col-end]; */
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "header-1 header-1 header-2 header 2"
+    "footer-1 footer-2 footer-3"
+    ; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2em;
+
+}
+
+
+.item-sale-header-1 {
+    flex: 1 1 45%;
+}
+
+.item-sale-header-2 {
+    flex: 1 1 45%;
+}
+
+
+.item-sale-footer-1 {
+    flex: 1 1 30%;
+}
+
+.item-sale-footer-2 {
+    flex: 1 1 30%;
+}
+
+
+.item-sale-footer-3 {
+    flex: 1 1 30%;
+
+}
+
+.item-night-sale img {
+    object-fit: cover;
+    
+    width: 90%;
+    height: 220px;
+}
+
+
