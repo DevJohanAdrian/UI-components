@@ -14,7 +14,8 @@
     --raising-black: #1E212B;
     --links-underline-color: #9b51e0;
     --paddingSection: 60px 0px;
-    --marginElementos: 40px;
+    --marginElementos: 1em;
+    --marginSections: 2rem;
 }
 
 body {
@@ -26,10 +27,16 @@ body {
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
-    padding: var(--colorFour);
-    border: 1px solid green;
+    /* padding: var(--paddingSection); */
+    /* border: 1px solid green; */
 
 }
+
+/* container spacing  */
+.container-spacing {
+    margin-bottom: calc(var(--marginSections) + 5rem);
+}
+
 
 /* navigation */
 
@@ -117,11 +124,18 @@ grosor de la letra */
     /* display: flex;
     flex-direction: column;
     flex-wrap: wrap; */
+
+    margin-top: var(--marginSections);
+
 }
 
-.offers-menu>* {
+/* .offers-menu>* {
     border: 1px solid black;
 
+} */
+
+.navigation-offers {
+    margin-top: calc(var(--marginSections) - 1rem)
 }
 
 .list-offer-container {
@@ -156,7 +170,10 @@ grosor de la letra */
 .night-sale-cards-section {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: calc(var(--marginSections) + 1rem)
 }
+
+
 
 .night-sale-container {
     display: flex;
@@ -169,11 +186,18 @@ grosor de la letra */
     ; */
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    gap: 2em;
+    gap: 1em;
 
 }
 
+.night-sale-title-container,
+.location-title-container {
+    margin-bottom: var(--marginElementos);
+}
+
+/* .night-sale-container > *{
+    border: 10px solid black;
+} */
 
 .item-sale-header-1 {
     flex: 1 1 45%;
@@ -200,9 +224,188 @@ grosor de la letra */
 
 .item-night-sale img {
     object-fit: cover;
-    
-    width: 90%;
+    width: 100%;
     height: 220px;
 }
 
 
+/* price */
+.price-container {
+    text-align: end;
+}
+
+.price-container h3 {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.price-container strong {
+    font-size: 1.5rem;
+}
+
+.price-container p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* locations  */
+
+.location-cards-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    border: 1px solid black;
+
+}
+
+/* arabia */
+.location-1-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2, 1fr;
+    gap: 1em;
+}
+
+.location-1-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+
+}
+
+
+.arabia-1-img {
+    object-position: left 50% top 10%;
+}
+
+.arabia-4-img {
+    object-position: left 50% top 100%;
+}
+
+
+.buy-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: var(--marginElementos);
+}
+
+.buy-link:hover {
+    text-decoration: underline var(--links-underline-color) 0.2rem
+}
+
+
+/* mexico */
+
+.location-2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.location-2-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+}
+
+/* bahamas */
+.location-3-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.location-3-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+}
+
+/* chile */
+
+.location-4-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.location-4-container img {
+    object-fit: cover;
+    object-position: left 50% top 60%;
+    ;
+    width: 100%;
+    height: 220px;
+
+}
+
+
+/* footer */
+.footer-container{
+    background-color: #DEDEDE;
+ 
+}
+
+.footer-section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "title title title" "section-1 section-2 section-3";
+    gap: 1em;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    
+}
+
+
+
+.title-container-footer h2{
+    font-size: 1.5rem ;
+    font-weight: 700;
+}
+
+.footer-section-container  li {
+    list-style: none;
+}
+
+.footer-section-container  li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+
+.footer-section-container  li a:hover{
+    text-decoration: underline var(--links-underline-color)  0.2rem; 
+}
+
+.item-footer-1 {
+    grid-area: title;
+}
+
+.item-footer-2 {
+    grid-area: section-1;
+}
+
+.item-footer-3 {
+    grid-area: section-2;
+}
+
+.item-footer-4 {
+    grid-area: section-3;
+}
